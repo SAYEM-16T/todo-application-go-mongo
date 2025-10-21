@@ -1,0 +1,16 @@
+# IDE / OS / Temp
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Docker
+mongo_data/
+**/tmp/
+**/dist/
+**/node_modules/
+
+# Env files
+#backend/.env
+#backend/.env.local
+#.env

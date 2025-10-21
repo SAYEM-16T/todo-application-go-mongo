@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Register — TODO</title>
+<link rel="stylesheet" href="/static/styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="/">Todo</a>
+      <div class="spacer"></div>
+      <a class="btn" href="/login">Login</a>
+    </nav>
+
+    <div class="card auth-card">
+      <h1>Create account</h1>
+      <form class="form" action="/register" method="POST">
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Password (min 6 chars)" minlength="6" required>
+        <button class="btn btn-primary" type="submit">Register</button>
+      </form>
+      <div class="links">
+        <a href="/login">I already have an account</a>
+      </div>
+    </div>
+
+    <footer class="footer">Built with Go + MongoDB</footer>
+  </div>
+</body>
+</html>

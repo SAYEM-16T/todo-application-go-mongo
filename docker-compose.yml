@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: todo-mongo
+    restart: always
+    ports:
+      - "27017:27017"    # optional; allows local inspection
+    volumes:
+      - mongo_data:/data/db
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todo-app
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      MONGODB_URI: mongodb://mongo:27017
+      DB_NAME: todoapp
+      JWT_SECRET: super-secure-change-me
+      ADDR: ":8080"
+
+volumes:
+  mongo_data:

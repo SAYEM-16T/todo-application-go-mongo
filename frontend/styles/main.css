@@ -1,0 +1,164 @@
+:root{
+  /* New modern pastel gradient */
+  --bg1:#a8edea;        /* light aqua */
+  --bg2:#fed6e3;        /* light pink */
+  --bg3:#d0e6f6;        /* light blue tint */
+  --card:rgba(255,255,255,0.25);
+  --border:rgba(255,255,255,0.4);
+  --text:#222;           /* main text dark */
+  --muted:#555;          /* subtle muted text */
+  --accent:#4c77ff;      /* main accent blue */
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:"Poppins",Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  background-attachment:fixed;
+  min-height:100vh;
+}
+
+/* ---- Layout & Container ---- */
+.container{max-width:920px;margin:0 auto;padding:32px 16px}
+.nav{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.brand{font-weight:800;letter-spacing:.5px;color:var(--accent)}
+.spacer{flex:1}
+
+/* ---- Card & Hero ---- */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:24px;
+  backdrop-filter:blur(15px);
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  transition:all 0.3s ease;
+}
+.card:hover{
+  transform:translateY(-3px);
+}
+.hero{
+  padding:48px;
+  text-align:center;
+  background:rgba(255,255,255,0.3);
+  border-radius:24px;
+  box-shadow:0 6px 20px rgba(0,0,0,.1);
+}
+
+h1{margin:0 0 12px;font-size:1.8rem;}
+p.muted{opacity:.85;margin:0 0 16px;color:var(--muted);font-weight:500;}
+
+/* ---- Buttons ---- */
+.btn{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:10px 16px;
+  background:transparent;
+  color:var(--text);
+  cursor:pointer;
+  font-weight:600;
+  transition:all .2s ease;
+}
+.btn:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,0.3);
+}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.btn-primary:hover{
+  background:#3b5afc;
+}
+.btn-secondary{background:rgba(255,255,255,.2);}
+.btn-danger{
+  background:#ff4d4f;
+  border-color:#ff4d4f;
+  color:white;
+}
+.btn-link{
+  background:transparent;
+  border:none;
+  text-decoration:underline;
+  color:var(--accent);
+  padding:0;
+}
+.inline{display:inline}
+
+/* ---- Forms ---- */
+.add-form{display:flex;gap:8px;margin:12px 0 20px}
+.add-form input,.form input{
+  flex:1;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.6);
+  color:#000;
+  outline:none;
+  font-size:1rem;
+}
+.add-form input::placeholder{
+  color:#444;
+}
+
+/* ---- Todo List ---- */
+.todo-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.todo-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.55);
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+.todo-item .title{
+  font-weight:600;
+  color:#000;
+}
+.todo-item.completed .title{
+  text-decoration:line-through;
+  color:var(--muted);
+}
+.todo-item .actions{display:flex;gap:8px}
+.empty{text-align:center;opacity:.8;padding:12px;color:var(--muted)}
+
+/* ---- Footer ---- */
+.footer{
+  opacity:.9;
+  margin-top:24px;
+  text-align:center;
+  color:#000;
+  font-weight:500;
+}
+
+/* ---- Auth Pages ---- */
+.auth-card{
+  max-width:420px;
+  margin:64px auto;
+  background:rgba(255,255,255,0.3);
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 6px 25px rgba(0,0,0,.1);
+}
+.form{display:flex;flex-direction:column;gap:12px}
+.links{display:flex;gap:12px;justify-content:center;margin-top:12px}
+
+/* ---- Text Overrides ---- */
+.nav .brand,
+.nav .user,
+main h1{
+  color:#000;
+}
