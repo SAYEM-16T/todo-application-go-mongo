@@ -16,6 +16,28 @@ The whole stack is containerized with **Docker Compose**, so anyone can run it w
 - **Dockerized** stack (app + database)
 
 ---
+## 📸 Screenshots (full flow)
+
+### 1) Landing
+![Landing](images/Screenshot%20from%202025-10-21%2016-00-09.png)
+
+### 2) Register
+![Register](images/Screenshot%20from%202025-10-21%2016-00-45.png)
+
+### 3) App — first visit (empty state)
+![App empty](images/Screenshot%20from%202025-10-21%2016-01-38.png)
+
+### 4) App — first task added
+![First task added](images/Screenshot%20from%202025-10-21%2016-01-48.png)
+
+### 5) App — typing second task
+![Typing second task](images/Screenshot%20from%202025-10-21%2016-03-36.png)
+
+### 6) App — two tasks shown
+![Two tasks](images/Screenshot%20from%202025-10-21%2016-03-45.png)
+
+### 7) Login
+![Login](images/Screenshot%20from%202025-10-21%2016-04-22.png)
 
 
 
